@@ -45,9 +45,12 @@ if ($conn->connect_error) {
 // Hash the password
 $hashedPassword = password_hash($pass, PASSWORD_DEFAULT);
 
+// Default Role
+$role = 'user';
+
 // Prepare and bind
-$stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
-$stmt->bind_param("sss", $user, $email, $hashedPassword);
+$stmt = $conn->prepare("INSERT INTO users (username, email, password, role) VALUES (?, ?, ?)");
+$stmt->bind_param("sss", $user, $email, $hashedPassword, $role);
 
 // Execute the query
 if ($stmt->execute()) {

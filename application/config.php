@@ -1,4 +1,7 @@
 <?php
+
+define('BASE_URL', 'http://127.0.0.1/');
+
 // Database configuration
 $servername = "192.168.1.14";
 $db_username = "acore";

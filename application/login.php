@@ -34,7 +34,7 @@ if (!empty($errors)) {
     }
 
     // Prepare and bind
-    $stmt = $conn->prepare("SELECT id, username, password FROM users WHERE email = ?");
+    $stmt = $conn->prepare("SELECT id, username, password, role FROM users WHERE email = ?");
     $stmt->bind_param("s", $email);
 
     // Execute the query
@@ -43,7 +43,7 @@ if (!empty($errors)) {
 
     // Check if the user exists
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($user_id, $username, $hashedPassword);
+        $stmt->bind_result($user_id, $username, $hashedPassword, $role);
         $stmt->fetch();
 
         // Verify password
@@ -51,11 +51,12 @@ if (!empty($errors)) {
             // Set session variables
             $_SESSION['user_id'] = $user_id;
             $_SESSION['username'] = $username;
+            $_SESSION['role'] = $role;
 
             echo "Login successful! Welcome, $username.";
             // Redirect to a protected page or dashboard
-            header("Location: index.php");
-            // exit;
+            header("Location: " . BASE_URL . "index.php");
+            exit;
         } else {
             echo "<p style='color: red;'>Invalid password.</p>";
         }
