@@ -1,0 +1,106 @@
+/* Register */
+
+/* Reset some basic elements */
+body, h1, p, input, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Basic body styling */
+body {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container styling */
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Form title */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Paragraph styling */
+p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+/* Horizontal line styling */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Label styling */
+label {
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}
+
+/* Input field styling */
+input[type="text"], input[type="password"], input[type="username"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0 16px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+button.registerbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+}
+
+button.registerbtn:hover {
+    background-color: #45a049;
+}
+
+/* Link styling */
+a {
+    color: dodgerblue;
+}
+
+/* Sign in container */
+.container.signin {
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    button.registerbtn {
+        padding: 12px 18px;
+    }
+}
