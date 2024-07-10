@@ -53,7 +53,7 @@ if (!empty($errors)) {
 
             echo "Login successful! Welcome, $username.";
             // Redirect to a protected page or dashboard
-            // header("Location: dashboard.php");
+            header("Location: http://127.0.0.1/index.html");
             // exit;
         } else {
             echo "<p style='color: red;'>Invalid password.</p>";
