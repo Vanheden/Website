@@ -11,6 +11,7 @@
   <header>
   <?php include 'navbar.php'; ?>
   </header>
+  
   <div class="main-content">
     <form action="application/login.php" method="POST">
         <div class="container">
