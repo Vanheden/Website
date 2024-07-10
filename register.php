@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Execute-Gaming - Gaming Community Since 2009</title>
     <link rel="stylesheet" href="styles/register.css">
-    <script src="js/navbar.js" defer></script>
+    <link rel="stylesheet" href="styles/navbar.css">
 </head>
 <body>
   <header>
-    <div id="navbar-container"></div>
-    <form action="application/register.php" method="POST">
+    <?php include 'navbar.php'; ?>
+    </header>
+
+    <div class="main-content">
+     <form action="application/register.php" method="POST">
         <div class="container">
           <h1>Register</h1>
           <p>Please fill in this form to create an account.</p>
@@ -34,10 +37,9 @@
         </div>
       
         <div class="container signin">
-          <p>Already have an account? <a href="#">Sign in</a>.</p>
+          <p>Already have an account? <a href="login.php">Sign in</a>.</p>
         </div>
       </form>
-  </header>
     
 </body>
 </html>

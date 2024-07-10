@@ -6,13 +6,27 @@ body, h1, p, input, button, label {
     box-sizing: border-box;
 }
 
-/* Basic body styling */
+/* Prevent horizontal overflow */
 body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
     background-color: #f2f2f2;
+    height: 100vh;
+    background-image: url("images/pixabay.jpg");
+    background-size: cover; /* Ensure the background image covers the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+}
+
+.main-content {
+    flex: 1; /* Take remaining space in the body */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    width: 100%; /* Ensure it does not exceed the width of the viewport */
 }
 
 /* Container styling */
@@ -24,6 +38,7 @@ body {
     max-width: 400px;
     width: 100%;
     margin: 20px 0;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 /* Label styling */
@@ -60,28 +75,8 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Cancel button styling */
-.cancelbtn {
-    background-color: #f44336;
-}
-
-.cancelbtn:hover {
-    background-color: #e53935;
-}
-
-/* Checkbox styling */
-label input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-/* Forgot password link styling */
-span.psw {
-    justify-content: center;
-    padding-top: 16px;
-}
-
 /* Additional container styling */
-.container:last-of-type {
+.container.signin {
     background-color: #f1f1f1;
     text-align: center;
 }

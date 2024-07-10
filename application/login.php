@@ -1,4 +1,5 @@
 <?php
+
 require 'config.php';
 
 // Initialize the session
@@ -53,7 +54,7 @@ if (!empty($errors)) {
 
             echo "Login successful! Welcome, $username.";
             // Redirect to a protected page or dashboard
-            header("Location: http://127.0.0.1/index.html");
+            header("Location: index.php");
             // exit;
         } else {
             echo "<p style='color: red;'>Invalid password.</p>";

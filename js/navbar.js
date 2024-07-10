@@ -1,8 +1,15 @@
-// navbar.js
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('navbar.html')
+    fetch('navbar.php')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('navbar-container').innerHTML = data;
+            const navbarContainer = document.getElementById('navbar-container');
+            if (navbarContainer) {
+                navbarContainer.innerHTML = data;
+            } else {
+                console.error('Navbar container element not found');
+            }
+        })
+        .catch(error => {
+            console.error('Error loading navbar:', error);
         });
 });

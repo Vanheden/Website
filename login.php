@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Execute-Gaming - Login</title>
     <link rel="stylesheet" href="styles/login.css">
-    <script src="js/navbar.js" defer></script>
+    <link rel="stylesheet" href="styles/navbar.css">
 </head>
 <body>
   <header>
-    <div id="navbar-container"></div>
+  <?php include 'navbar.php'; ?>
+  </header>
+  <div class="main-content">
     <form action="application/login.php" method="POST">
         <div class="container">
           <h1>Login</h1>
@@ -30,6 +32,6 @@
           <p>Don't have an account? <a href="register.php">Register</a>.</p>
         </div>
       </form>
-      </header>
+
 </body>
 </html>
