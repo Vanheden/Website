@@ -55,7 +55,7 @@ if (!empty($errors)) {
 
             echo "Login successful! Welcome, $username.";
             // Redirect to a protected page or dashboard
-            header("Location: " . BASE_URL . "index.php");
+            header("Location: /index.php");
             exit;
         } else {
             echo "<p style='color: red;'>Invalid password.</p>";

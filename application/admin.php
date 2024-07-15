@@ -1,15 +1,21 @@
 <?php
 session_start();
 if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
-    header('Location: index.php');
+    header("Location: /index.php");
     exit();
 }
 
+
+
+/**
+ * Summary of ensure_admin
+ * @return void
+ */
 function ensure_admin()
 {
     session_start();
     if (isset($_SESSION['role']) && $_SESSION['role'] != 'admin') {
-        header('Location: admin.php');
+        header("Location: /index.php");
         exit();
     }
 }

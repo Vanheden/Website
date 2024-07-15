@@ -1,9 +1,3 @@
-<?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +6,7 @@ if (session_status() == PHP_SESSION_NONE) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Execute-Gaming - Gaming Community Since 2009</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/navbar.css">
 </head>
 
@@ -19,8 +14,9 @@ if (session_status() == PHP_SESSION_NONE) {
     <header>
         <?php include 'navbar.php'; ?>
     </header>
-    <div class="main-content">
-    </div>
+
+    <div class="footer">Footer</div>
+
 </body>
 
 </html>
